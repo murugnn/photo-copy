@@ -173,7 +173,7 @@ class MovieSelfieMatcher {
         const actorNumber = filename.split('.')[0].split('_')[1] || 'X';
         
         this.matchedName.textContent = `Doppelgänger #${actorNumber}`;
-        this.matchedMovie.textContent = 'From the AI Database';
+        this.matchedMovie.textContent = 'From the Movie Database -- custom made';
         
         // Display the roast message from the server
         if (data.roast_message) {
@@ -202,4 +202,4 @@ class MovieSelfieMatcher {
 
 document.addEventListener('DOMContentLoaded', () => {
     new MovieSelfieMatcher();
-});
+});                     

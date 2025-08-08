@@ -5,41 +5,64 @@
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: WithoutChaya
 
 
 ### Team Members
 - Team Lead: S Murugan - NSS COLLEGE OF ENGINEERING PALAKKAD
 
 ### Project Description
-[2-3 lines about what your project does]
+
+Snap a selfie and let our app find your zany celebrity doppelganger from a wild database of famous faces—emotions and weird surprises guaranteed! Whether you get your lookalike or a totally unexpected match, it’s all about pointless fun and sharing laughs with friends. Everyone gets a twin—even if it makes no sense!
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+
+We’re solving the age-old dilemma of not knowing which random celebrity (or object!) you sort of, kind of, barely resemble in the silliest way possible. Our app matches your selfie to a “doppelganger” for no reason at all—removing any actual sense of purpose, but adding heaps of laughter and absurdity to your day. Because the world clearly needed a pointless way to discover your totally useless twin!
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+
+We’re tackling the world’s most pointless identity crisis with the power of AI and a database full of celebrity faces! Just upload your selfie, and our app launches into action—scanning pixels, making wild guesses, and matching you with your absurdly unexpected lookalike. It’s technical wizardry with zero real-world benefit, designed only to spark surprise, laughter, and maybe a little confusion. Because sometimes, you don’t need a real solution—just a really silly one!
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
+- Python, Javascript, HTML, CSS
+- Flask
+- face_recognition, numpy, groq, werkzeug
 - [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
 
 ### Implementation
 For Software:
 # Installation
-[commands]
+
+1. Clone the repository
+
+```bash
+    git clone https://github.com/murugnn/photo-copy.git
+    cd photo-copy
+```
 
 # Run
-[commands]
+
+2. Install the dependencies
+
+```bash
+    pip install -r requirements.txt
+```
+
+3. Scan the database folder
+
+```bash
+    python create_db.py
+```
+
+4. Run the flask server
+
+```bash
+    python app.py
+```
+
+The port will be available at http://localhost:5000
 
 ### Project Documentation
 For Software:
@@ -58,37 +81,14 @@ For Software:
 ![Workflow](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
 
 ### Project Demo
 # Video
 [Add your demo video link here]
 *Explain what the video demonstrates*
 
-# Additional Demos
-[Add any extra demo materials/links]
-
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- S Murugan
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
