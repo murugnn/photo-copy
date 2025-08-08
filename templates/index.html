@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eda ith nee alle</title>
+    <title>PhotoCOPY - AI Doppelgänger Finder</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Flask will correctly find this file in the 'static' folder -->
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <!-- The entire body of your HTML goes here, unchanged -->
     <div class="animated-background">
         <div class="graph-lines"></div>
         <div class="floating-particles"></div>
@@ -17,19 +15,18 @@
     
     <div class="container">
         <header class="header">
-            <!-- Header content... -->
             <div class="header-content">
                 <h1 class="title">
                     <span class="title-icon"></span>
-                    <span class="malayalam-title">എടാ ഇത് നീ അല്ലേ</span>
+                    <span class="malayalam-title">PhotoCOPY</span>
                 </h1>
-                <p class="subtitle">Upload your selfie and find your movie doppelganger</p>
+                <p class="subtitle">Upload your selfie and find your movie doppelgänger</p>
             </div>
         </header>
 
         <main class="main-content">
             <div class="app-grid">
-                <!-- Upload Section (your HTML here) -->
+                <!-- Upload Section -->
                 <div class="upload-section">
                     <div class="upload-card">
                         <div class="upload-header">
@@ -64,12 +61,12 @@
                         </div>
 
                         <div class="upload-info">
-                            <p>Supported formats: JPG, PNG, GIF (max 10MB)</p>
+                            <p>Supported formats: JPG, PNG (max 10MB)</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Results Section (your HTML here) -->
+                <!-- Results Section -->
                 <div class="results-section">
                     <div class="results-card">
                         <div class="results-header">
@@ -97,14 +94,13 @@
                                     <div class="match-details">
                                         <h3 id="matchedName" class="matched-name"></h3>
                                         <p id="matchedMovie" class="matched-movie"></p>
-                                        <div class="confidence-bar">
-                                            <span class="confidence-label">Match Confidence</span>
-                                            <div class="confidence-meter">
-                                                <div class="confidence-fill" id="confidenceFill"></div>
-                                            </div>
-                                            <span class="confidence-value" id="confidenceValue">0%</span>
-                                        </div>
                                     </div>
+                                </div>
+                                
+                                <!-- AI Roast Section (Replaces Confidence Bar) -->
+                                <div class="roast-container" id="roastContainer" style="display: none;">
+                                    <p class="roast-title">PhotoCOPY AI Says:</p>
+                                    <p class="roast-message" id="roastMessage"></p>
                                 </div>
                             </div>
 
@@ -134,11 +130,10 @@
         </main>
 
         <footer class="footer">
-            <p>&copy; 2025 Movie Selfie Matcher. Powered by AI technology.</p>
+            <p>&copy; 2025 PhotoCOPY. Powered by useless AI technology.</p>
         </footer>
     </div>
     
-    <!-- This is the crucial link to our JavaScript file -->
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

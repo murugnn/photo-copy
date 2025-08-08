@@ -37,11 +37,11 @@
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: linear-gradient(135deg, 
-        #0a0a0a 0%, 
-        #1a0a1a 25%, 
-        #0a1a1a 50%, 
-        #1a1a0a 75%, 
+    background: linear-gradient(135deg,
+        #0a0a0a 0%,
+        #1a0a1a 25%,
+        #0a1a1a 50%,
+        #1a1a0a 75%,
         #0a0a0a 100%);
     overflow: hidden;
 }
@@ -52,7 +52,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 107, 107, 0.1) 1px, transparent 1px),
         linear-gradient(90deg, rgba(78, 205, 196, 0.1) 1px, transparent 1px),
         linear-gradient(rgba(69, 183, 209, 0.05) 1px, transparent 1px),
@@ -78,7 +78,7 @@
     background: var(--primary-color);
     border-radius: 50%;
     animation: float 6s ease-in-out infinite;
-    box-shadow: 
+    box-shadow:
         0 0 10px var(--primary-color),
         20px 20px 0 var(--secondary-color),
         40px 40px 0 var(--accent-color),
@@ -211,9 +211,9 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, 
-        transparent, 
-        rgba(255, 107, 107, 0.1), 
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 107, 107, 0.1),
         transparent);
     transition: left 0.5s;
 }
@@ -467,41 +467,29 @@ body {
     margin-bottom: 24px;
 }
 
-.confidence-bar {
+/* STYLES FOR CONFIDENCE BAR ARE REMOVED */
+
+/* NEW: AI Roast Container Styles */
+.roast-container {
     background: var(--background-secondary);
+    border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
+    text-align: center; /* Centering the roast content */
 }
 
-.confidence-label {
-    display: block;
+.roast-title {
     font-size: 0.9rem;
     font-weight: 600;
     color: var(--text-secondary);
     margin-bottom: 12px;
 }
 
-.confidence-meter {
-    height: 8px;
-    background: var(--border-color);
-    border-radius: 4px;
-    overflow: hidden;
-    margin-bottom: 8px;
-}
-
-.confidence-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--success-color), var(--primary-color), var(--secondary-color));
-    border-radius: 4px;
-    transition: width 1s ease-out;
-    box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
-}
-
-.confidence-value {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--primary-color);
+.roast-message {
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--primary-color); /* Making the roast text stand out */
+    line-height: 1.5;
 }
 
 /* Loading State */
@@ -554,7 +542,7 @@ body {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    
+
     .title {
         font-size: 2.5rem;
         flex-direction: column;
@@ -566,40 +554,40 @@ body {
     .container {
         padding: 0 16px;
     }
-    
+
     .header {
         padding: 32px 0;
         margin-bottom: 32px;
     }
-    
+
     .title {
         font-size: 2rem;
     }
-    
+
     .upload-card,
     .results-card {
         padding: 24px;
     }
-    
+
     .upload-area {
         padding: 32px 16px;
         min-height: 250px;
     }
-    
+
     .upload-actions,
     .results-actions {
         flex-direction: column;
         align-items: stretch;
     }
-    
+
     .btn {
         width: 100%;
     }
-    
+
     .match-info {
         gap: 16px;
     }
-    
+
     .matched-image {
         width: 150px;
         height: 150px;
@@ -610,11 +598,11 @@ body {
     .title {
         font-size: 1.75rem;
     }
-    
+
     .subtitle {
         font-size: 1rem;
     }
-    
+
     .upload-header h2,
     .results-header h2 {
         font-size: 1.5rem;
