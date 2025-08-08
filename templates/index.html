@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eda ith nee alle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Flask will correctly find this file in the 'static' folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- The entire body of your HTML goes here, unchanged -->
+    <div class="animated-background">
+        <div class="graph-lines"></div>
+        <div class="floating-particles"></div>
+    </div>
+    
+    <div class="container">
+        <header class="header">
+            <!-- Header content... -->
+            <div class="header-content">
+                <h1 class="title">
+                    <span class="title-icon"></span>
+                    <span class="malayalam-title">എടാ ഇത് നീ അല്ലേ</span>
+                </h1>
+                <p class="subtitle">Upload your selfie and find your movie doppelganger</p>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="app-grid">
+                <!-- Upload Section (your HTML here) -->
+                <div class="upload-section">
+                    <div class="upload-card">
+                        <div class="upload-header">
+                            <h2>Upload Your Selfie</h2>
+                            <p>Drag and drop or click to select</p>
+                        </div>
+                        
+                        <div class="upload-area" id="uploadArea">
+                            <div class="upload-placeholder" id="uploadPlaceholder">
+                                <div class="upload-icon">
+                                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
+                                        <circle cx="12" cy="13" r="3"/>
+                                    </svg>
+                                </div>
+                                <div class="upload-text">
+                                    <p class="upload-main-text">Drop your image here</p>
+                                    <p class="upload-sub-text">or click to browse</p>
+                                </div>
+                            </div>
+                            <img id="previewImage" class="preview-image" alt="Preview" style="display: none;">
+                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                        </div>
+
+                        <div class="upload-actions">
+                            <button class="btn btn-primary" id="uploadBtn">
+                                Choose Image
+                            </button>
+                            <button class="btn btn-secondary" id="clearBtn" style="display: none;">
+                                Clear
+                            </button>
+                        </div>
+
+                        <div class="upload-info">
+                            <p>Supported formats: JPG, PNG, GIF (max 10MB)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section (your HTML here) -->
+                <div class="results-section">
+                    <div class="results-card">
+                        <div class="results-header">
+                            <h2>Your Movie Match</h2>
+                            <p>AI-powered celebrity lookalike detection</p>
+                        </div>
+
+                        <div class="results-content" id="resultsContent">
+                            <div class="results-placeholder" id="resultsPlaceholder">
+                                <div class="results-icon">
+                                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <path d="M9 11l3-3 3 3"/>
+                                        <path d="M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.745 3.745 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.745 3.745 0 0 1 3.296-1.043A3.745 3.745 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.745 3.745 0 0 1 3.296 1.043 3.745 3.745 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12z"/>
+                                    </svg>
+                                </div>
+                                <div class="results-text">
+                                    <p class="results-main-text">Upload an image to see results</p>
+                                    <p class="results-sub-text">Your movie doppelganger will appear here</p>
+                                </div>
+                            </div>
+
+                            <div class="results-display" id="resultsDisplay" style="display: none;">
+                                <div class="match-info">
+                                    <img id="matchedImage" class="matched-image" alt="Matched celebrity">
+                                    <div class="match-details">
+                                        <h3 id="matchedName" class="matched-name"></h3>
+                                        <p id="matchedMovie" class="matched-movie"></p>
+                                        <div class="confidence-bar">
+                                            <span class="confidence-label">Match Confidence</span>
+                                            <div class="confidence-meter">
+                                                <div class="confidence-fill" id="confidenceFill"></div>
+                                            </div>
+                                            <span class="confidence-value" id="confidenceValue">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="loading-state" id="loadingState" style="display: none;">
+                                <div class="loading-spinner"></div>
+                                <p class="loading-text">Analyzing your image...</p>
+                                <p class="loading-subtext">Finding your perfect movie match</p>
+                            </div>
+                        </div>
+
+                        <div class="results-actions" id="resultsActions" style="display: none;">
+                            <button class="btn btn-outline" id="shareBtn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+                                    <polyline points="16,6 12,2 8,6"/>
+                                    <line x1="12" y1="2" x2="12" y2="15"/>
+                                </svg>
+                                Share Result
+                            </button>
+                            <button class="btn btn-primary" id="retryBtn">
+                                Try Another Image
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Movie Selfie Matcher. Powered by AI technology.</p>
+        </footer>
+    </div>
+    
+    <!-- This is the crucial link to our JavaScript file -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
