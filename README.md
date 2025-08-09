@@ -72,19 +72,21 @@ For Software:
 Backend logic
 
 ![Description](assets/test3.png)
-
+---
 App UI
 
 ![Description](assets/test1.png)
 
 ![Description](assets/test2.png)
+---
+The output with an AI roast too..
 
+![Description](assets/test4.png)
+---
 # Diagrams
 
 ![Description](assets/processflow.png)
-
-
-
+---
 ### Project Demo
 # Video
 [Add your demo video link here]
