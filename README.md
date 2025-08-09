@@ -120,7 +120,7 @@ The output with an AI roast too..
 ### Project Demo
 # Video
 
-[![Watch the video](assets/test1.png)](https://drive.google.com/file/d/1Q4Ci7KkMuvL1UdKcpZPcQGooFSHt8ZDV/view?usp=sharing)
+[![Watch the video](assets/test1.png)](https://drive.google.com/file/d/1-tw23jzAz_evkVtHiGQ2GEWD1_UPrSF8/view?usp=sharing)
 
 
 ## Team Contributions
