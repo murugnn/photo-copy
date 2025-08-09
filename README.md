@@ -68,18 +68,17 @@ The port will be available at http://localhost:5000
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+![Description](assets/test3.png)
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+![Description](assets/test1.png)
+
+![Description](assets/test2.png)
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+
+![Description](assets/processflow.png)
+
 
 
 ### Project Demo
