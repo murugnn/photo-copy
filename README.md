@@ -89,8 +89,9 @@ The output with an AI roast too..
 ---
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+
+[![Watch the video](assets/test1.png)](https://drive.google.com/file/d/1Q4Ci7KkMuvL1UdKcpZPcQGooFSHt8ZDV/view?usp=sharing)
+
 
 ## Team Contributions
 - S Murugan
