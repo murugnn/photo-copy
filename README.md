@@ -69,7 +69,11 @@ For Software:
 
 # Screenshots (Add at least 3)
 
+Backend logic
+
 ![Description](assets/test3.png)
+
+App UI
 
 ![Description](assets/test1.png)
 
